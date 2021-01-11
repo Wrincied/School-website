@@ -1,0 +1,12 @@
+            <div class="header__contact number">
+              <img src="./src/img/component/icons8-phone-50.png"alt="Телефон" title="Номер телефона школы">
+              <a href="tel:+375172653690">8 (017) 2653690</a>
+            </div>  <!-- header__number -->
+
+            <div class="header__contact mail">
+            <img src="./src/img/component/icons8-important-mail-50.png" alt="Почта" title="Почта школы">
+              <a href="https://mail.google.com/mail/u/0/#search/bor-sch%40minsk.edu.by?compose=new" target="_blank">bor-sch@minsk.edu.by</a>
+
+              <div class="header__contact feedback">
+                <span><a href="https://vk.com/by_developer" target="_blank" >Обратная связь с разработчиком</a></span>
+              </div>
