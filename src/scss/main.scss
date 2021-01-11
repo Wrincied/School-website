@@ -181,6 +181,7 @@ $body-color:#f9f9f9;
   padding: 10px;
   padding-left:20px;
   display: inline-flex;
+
 }
 
 
@@ -308,7 +309,7 @@ $body-color:#f9f9f9;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 // header__title
@@ -321,7 +322,7 @@ $body-color:#f9f9f9;
 }
 
 @media screen and (max-width: 1000px){
-  .menu-box {
+  .menu-box,.nav-menu,.menu__hamburger {
     margin: 0;
     padding: 0px;
   }
@@ -331,29 +332,52 @@ $body-color:#f9f9f9;
   }
 
   .menu-box li .menu-box__item{
-    color: #3f3b3b;
     font-size: 13px;
-    line-height: 21px;
-    font-family: "Poppins",sans-serif;
-    text-decoration: none;
-    display: inline;
-    position: relative;
+    line-height: 11px;
+  }
+  .header__title{ 
+    & h1{
+      font-size: 55px;
+      line-height: 75px;
+    }
+    & p{
+      font-size: 20px;
+    }
+
+  }
+  .communication{
+    padding: 5px;
+    padding-left:10px;
+    & div{
+      padding-left:5px ;
+    }
   }
 }
 
-@media screen and (max-width: 778px){
+@media screen and (max-width: 900px){
+  .nav-menu {
+    width: 100%;
+    max-height: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    .menu-box li .menu-box__item{
+      font-size: 20px;
+      line-height: 15px;
+
+    }
+  }
   input{
     display: initial;
 }
   .menu__hamburger{
-    min-height:0px ;
+    min-height:0px;
 }
-  nav,ul { display: none; /* Прячем */ }
-:checked ~ .nav,ul,.menu__hamburger {
+  .nav,.menu-box { display: none; /* Прячем */ }
+:checked ~ .nav,.menu-box, {
   display: initial; /* Показываем меню */
-  transition: all 0.3s ease-in-out;
-}
+  transition: all 0.5s ease-in-out;
 
+}
   label{
     position: relative;
 }

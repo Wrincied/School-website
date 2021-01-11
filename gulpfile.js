@@ -5,6 +5,8 @@ uglify = require('gulp-uglify'),
 concat = require('gulp-concat'),
 rename = require('gulp-rename');
 
+
+// function scss to css(compressed)
 gulp.task('scss' ,function(){
     return gulp.src('src/scss/**/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
@@ -12,18 +14,23 @@ gulp.task('scss' ,function(){
     .pipe(gulp.dest('src/css'))
     .pipe(browserSync.reload({stream:true}))
 });
+// function scss to css(compressed)
 
+// livestream html
 gulp.task('html',function(){
     return gulp.src('*.html')
     .pipe(browserSync.reload({stream:true}))
 });
+// livestream html
 
+// livestream javascript
 gulp.task('script',function(){
     return gulp.src('src/*.html')
     .pipe(browserSync.reload({stream:true}))
 });
+// livestream javascript
 
-
+// function js to compressed js and other modules
 gulp.task('js',function(){
     return gulp.src([
         'node_modules/slick-carousel/slick/slick.js',
@@ -34,7 +41,9 @@ gulp.task('js',function(){
     .pipe(gulp.dest('src/js'))
     .pipe(browserSync.reload({stream:true}))
 });
+// function js to compressed js and other modules
 
+//function Live-server
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
@@ -42,8 +51,9 @@ gulp.task('browser-sync', function() {
         }
     });
 });
+//function Live-server
 
-
+//connected all function
 gulp.task('watch' ,function(){
     gulp.watch('src/scss/**/*.scss',gulp.parallel('scss'))
     gulp.watch('*.html',gulp.parallel('html'))
@@ -51,3 +61,4 @@ gulp.task('watch' ,function(){
 });
 
 gulp.task('default',gulp.parallel('browser-sync', 'watch'))
+//connected all function

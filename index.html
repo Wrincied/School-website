@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="hnz-technology[Arseny Milevsky]">
+    <meta name="author" content="hnz-technology[Arseny Milevsky — dev,Felics Mamaev — Design, ]">
     <meta name="keywords" content="Боровлянская Средняя Школа,сайт БСШ,Боровлянская СШ,Школа Боровляны,Школа Лесной">
     <meta name="description" content="Главная страница сайта ГУО 'Боровлянская средняя школа'!">
     <meta http-equiv="refresh" content="300">
@@ -22,6 +22,20 @@
     <link rel="stylesheet" href="./src/css/main.min.css">
     <!-- Icon -->
     <link rel="icon" href="src/img/component/sm.png">
+  <!-- Css style -->
+  <style>
+  .header__date-time{
+    text-align: center;
+    text-decoration: none;  
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 21px;  
+    color: #ffffff;
+  }
+  </style>
+  <!-- Css style -->
+
 </head>
 
 
@@ -41,12 +55,17 @@
             </div><!-- communication__mail -->
 
             <div class="feedback"><!-- communication__feedback -->
-              <img src="/src/img/component/icons8-headset-96.png" alt="Обратная связь">
+              <img src="./src/img/component/icons8-headset-96.png" alt="Обратная связь">
               <a href="https://vk.com/by_developer" target="_blank">Обратная связь</a>
             </div><!-- communication__feedback -->
+            <div class="header__date-time">
+              <script>
+                var d = new Date(); var day=new Array("Воскресенье,","Понедельник,","Вторник,", "Среда,","Четверг,","Пятница,","Суббота,"); var month=new Array("января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря");document.write(day[d.getDay()]+" " +d.getDate()+ " " + month[d.getMonth()]+ " " + d.getFullYear());
+              </script>
+            </div>  <!-- header__time -->
           </div>
 
-              
+
 <div class="menu__hamburger">
   <input type="checkbox" id="menu">
   <div class="nav-menu"> 
@@ -67,10 +86,6 @@
   </div><!-- navbar -->
 </div> <!-- menu__hamburger -->
 
-
- 
-
-
 <div class="header__title">
   <h1> ГУО Боровлянская средняя школа</h1>
   <p>Чему бы ты ни учился, ты учишься для себя.</p>
@@ -79,12 +94,11 @@
             </div> <!-- header -->
           
         
-        <!-- <div class="header__date-time">
+        <div class="header__date-time">
           <script>
             var d = new Date(); var day=new Array("Воскресенье,","Понедельник,","Вторник,", "Среда,","Четверг,","Пятница,","Суббота,"); var month=new Array("января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря");document.write(day[d.getDay()]+" " +d.getDate()+ " " + month[d.getMonth()]+ " " + d.getFullYear());
           </script>
-        </div>  header__time -->
-
+        </div>  <!-- header__time -->
       <div id="main-content">
 f
       </div>
